@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class SolutionTest {
+class OfficialSolutionTest {
 
     @Test
     void mergeTest() {
-        Solution solution = new Solution();
+        OfficialSolution solution = new OfficialSolution();
         int[] nums = new int[]{1, 2, 3, 0, 0, 0};
         solution.merge(nums, 3, new int[]{2, 5, 6}, 3);
         assertArrayEquals(new int[]{1, 2, 2, 3, 5, 6}, nums);
