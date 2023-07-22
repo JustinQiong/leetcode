@@ -2,7 +2,7 @@ package q104;
 
 import com.TreeNode;
 
-public class Solution {
+class Solution {
 
     public int maxDepth(TreeNode root) {
         if (root == null) {

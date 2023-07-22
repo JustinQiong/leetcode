@@ -2,7 +2,7 @@ package q101;
 
 import com.TreeNode;
 
-public class Solution {
+class Solution {
 
     public boolean isSymmetric(TreeNode root) {
         return check(root.left, root.right);
