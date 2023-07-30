@@ -1,5 +1,6 @@
 package q191;
 
+import j.q191.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package q191;
+package j.q191;
 
 public class Solution {
     public int hammingWeight(int n) {
