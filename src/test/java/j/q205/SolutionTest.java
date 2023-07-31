@@ -7,10 +7,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class SolutionTest {
 
     @Test
-    void isIsomorphic() {
+    void isIsomorphicHash() {
         Solution solution = new Solution();
-        assertTrue(solution.isIsomorphic("egg", "add"));
-        assertFalse(solution.isIsomorphic("foo", "bar"));
-        assertTrue(solution.isIsomorphic("paper", "title"));
+        assertTrue(solution.isIsomorphicHash("egg", "add"));
+        assertFalse(solution.isIsomorphicHash("foo", "bar"));
+        assertTrue(solution.isIsomorphicHash("paper", "title"));
+    }
+
+    @Test
+    void isIsomorphicArray() {
+        Solution solution = new Solution();
+        assertTrue(solution.isIsomorphicArray("egg", "add"));
+        assertFalse(solution.isIsomorphicArray("foo", "bar"));
+        assertTrue(solution.isIsomorphicArray("paper", "title"));
     }
 }
