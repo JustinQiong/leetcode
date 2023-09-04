@@ -1,5 +1,6 @@
 package q27;
 
+import j.q27.Solution;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

@@ -1,4 +1,4 @@
-package q27;
+package j.q27;
 
 public class Solution {
 
