@@ -5,14 +5,20 @@ import java.util.logging.Level;
 public class Solution {
 
     public int removeDuplicates(int[] nums) {
-        int i = 0;
-        int curr = 1;
-        while (curr < nums.length) {
-            if (nums[curr] != nums[i]) {
-                nums[++i] = nums[curr];
-            }
-            curr++;
+        if (nums.length == 0) {
+            return 0;
         }
-        return i + 1;
+
+        int fast = 1;
+        int slow = 1;
+        while (fast < nums.length) {
+            if (nums[fast] != nums[fast - 1]) {
+                nums[slow] = nums[fast];
+                slow++;
+            }
+            fast++;
+        }
+
+        return slow;
     }
 }
