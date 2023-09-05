@@ -1,24 +1,22 @@
 package j.q80;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class Solution {
 
     public int removeDuplicates(int[] nums) {
-        int i = 0;
-        int curr = 1;
-        Set<Integer> duplicate = new HashSet<>();
-        while (curr < nums.length) {
-            if (nums[curr] != nums[i]) {
-                nums[++i] = nums[curr];
-            } else if (!duplicate.contains(nums[curr])) {
-                nums[++i] = nums[curr];
-                duplicate.add(nums[curr]);
-            }
-            curr++;
+        if (nums.length <= 2) {
+            return nums.length;
         }
 
-        return i + 1;
+        int fast = 2;
+        int slow = 2;
+        while (fast < nums.length) {
+            if (nums[fast] != nums[slow - 2]) {
+                nums[slow] = nums[fast];
+                slow++;
+            }
+            fast++;
+        }
+
+        return slow;
     }
 }
