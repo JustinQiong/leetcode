@@ -2,8 +2,6 @@ package j.q98;
 
 import j.com.TreeNode;
 
-import javax.xml.validation.Validator;
-
 public class Solution {
 
     public boolean isValidBST(TreeNode root) {
