@@ -4,11 +4,14 @@ import j.com.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
 public class Solution {
 
     public Node connect(Node root) {
+        if (root == null) {
+            return root;
+        }
+
         Queue<Node> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()) {
@@ -28,6 +31,33 @@ public class Solution {
                     queue.add(node.right);
                 }
             }
+        }
+
+        return root;
+    }
+
+    public Node connectOptimized(Node root) {
+        if (root == null) {
+            return root;
+        }
+        Node curr = root;
+        while (curr != null) {
+            Node dummy = new Node(0);
+            Node pre = dummy;
+            while (curr != null) {
+                if (curr.left != null) {
+                    pre.next = curr.left;
+                    pre = pre.next;
+                }
+
+                if (curr.right != null) {
+                    pre.next = curr.right;
+                    pre = pre.next;
+                }
+
+                curr = curr.next;
+            }
+            curr = dummy.next;
         }
 
         return root;
