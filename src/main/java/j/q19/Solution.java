@@ -1,4 +1,4 @@
-package q19;
+package j.q19;
 
 import j.com.ListNode;
 
