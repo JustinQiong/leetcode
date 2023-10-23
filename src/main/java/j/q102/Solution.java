@@ -12,7 +12,7 @@ public class Solution {
         }
 
         Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
+        queue.offer(root);
 
         List<List<Integer>> res = new ArrayList<>();
         while (!queue.isEmpty()) {
@@ -23,11 +23,11 @@ public class Solution {
                 list.add(node.val);
 
                 if (node.left != null) {
-                    queue.add(node.left);
+                    queue.offer(node.left);
                 }
 
                 if (node.right != null) {
-                    queue.add(node.right);
+                    queue.offer(node.right);
                 }
             }
 
