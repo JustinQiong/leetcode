@@ -1,6 +1,6 @@
 package j.q208;
 
-class Trie {
+public class Trie {
 
     Trie[] children;
     boolean isEnd;
@@ -42,5 +42,13 @@ class Trie {
         }
 
         return node;
+    }
+
+    public Trie[] getChildren() {
+        return children;
+    }
+
+    public boolean isEnd() {
+        return isEnd;
     }
 }
