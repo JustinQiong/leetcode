@@ -1,4 +1,4 @@
-package q27;
+package j.q27;
 
 import j.q27.Solution;
 import org.junit.jupiter.api.Test;

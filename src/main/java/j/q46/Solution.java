@@ -1,4 +1,4 @@
-package q46;
+package j.q46;
 
 import java.util.ArrayList;
 import java.util.List;

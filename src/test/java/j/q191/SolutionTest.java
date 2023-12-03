@@ -1,4 +1,4 @@
-package q191;
+package j.q191;
 
 import j.q191.Solution;
 import org.junit.jupiter.api.Test;
