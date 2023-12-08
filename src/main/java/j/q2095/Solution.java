@@ -16,6 +16,7 @@ public class Solution {
         }
         pre.next = slow.next;
 
+
         return head;
     }
 
