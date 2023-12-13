@@ -4,25 +4,23 @@ import j.com.TreeNode;
 
 public class Solution {
 
-    TreeNode ans;
-
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-        dfs(root, p, q);
-        return ans;
-    }
-
-    private boolean dfs(TreeNode root, TreeNode p, TreeNode q) {
-        if (root == null) {
-            return false;
+        if (root == null || root == p || root == q) {
+            return root;
         }
 
-        boolean leftSon = dfs(root.left, p, q);
-        boolean rightSon = dfs(root.right, p, q);
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        if ((leftSon && rightSon) || ((root.val == p.val || root.val == q.val) && (leftSon || rightSon))) {
-            ans = root;
+        if (left == null) {
+            return right;
         }
 
-        return leftSon || rightSon || root.val == p.val || root.val == q.val;
+        if (right == null) {
+            return left;
+        }
+
+        return root;
     }
+
 }
