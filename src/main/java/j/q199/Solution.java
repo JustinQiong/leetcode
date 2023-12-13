@@ -2,8 +2,7 @@ package j.q199;
 
 import j.com.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class Solution {
 
@@ -30,6 +29,35 @@ public class Solution {
         rightView(root.right, depth);
         rightView(root.left, depth);
 
+    }
+
+    public List<Integer> rightSideViewBFS(TreeNode root) {
+        if (root == null) {
+            return Collections.emptyList();
+        }
+
+        List<Integer> view = new ArrayList<>();
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode node = queue.poll();
+                if (i == size - 1) {
+                    view.add(node.val);
+                }
+                if (node.left != null) {
+                    queue.offer(node.left);
+                }
+
+                if (node.right != null) {
+                    queue.offer(node.right);
+                }
+            }
+        }
+
+        return view;
     }
 
 }
