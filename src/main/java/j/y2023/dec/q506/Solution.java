@@ -2,6 +2,10 @@ package j.y2023.dec.q506;
 
 import java.util.Arrays;
 
+/**
+ * 506. Relative Ranks
+ * Sort the array with pair of (index, score) by comparing score.
+ */
 public class Solution {
     public String[] findRelativeRanks(int[] score) {
         int n = score.length;
