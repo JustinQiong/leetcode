@@ -11,6 +11,7 @@ public class Node {
     public Node left;
     public Node right;
     public List<Node> neighbors;
+    public List<Node> children;
 
     public Node(int val) {
         this.val = val;
