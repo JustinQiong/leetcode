@@ -1,4 +1,4 @@
-package j.y2023.dec.q575;
+package j.y2024.jan.q575;
 
 /**
  * 575. Distribute Candies

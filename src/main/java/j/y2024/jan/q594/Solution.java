@@ -1,4 +1,4 @@
-package j.y2023.dec.q594;
+package j.y2024.jan.q594;
 
 import java.util.HashMap;
 import java.util.Map;
