@@ -13,7 +13,7 @@ import java.util.LinkedList;
  * the one on the top of the stack, pop the top
  * node out. Push each of the node into the stack.
  * Finally, pop out the node remains in the stack
- * and form a new list.
+ * and form a new list. That is the answer.
  */
 public class Solution {
 
