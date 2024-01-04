@@ -15,7 +15,6 @@ public class Solution {
     public int nearestExit(char[][] maze, int[] entrance) {
         Queue<int[]> queue = new LinkedList<>();
         queue.offer(entrance);
-        boolean find = false;
         int steps = -1;
         maze[entrance[0]][entrance[1]] = '+';
         int rows = maze.length - 1;
