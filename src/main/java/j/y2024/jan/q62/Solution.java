@@ -9,6 +9,7 @@ import java.util.Arrays;
  *
  * Optimized dp solution:
  * dp[j] = dp[j]+dp[j-1]
+ * <a href="https://leetcode.cn/problems/unique-paths/solutions/2596764/62bu-tong-lu-jing-dong-tai-gui-hua-jie-f-lmy7/">My Leetcode.cn Solution</a>
  */
 public class Solution {
     public int uniquePaths(int m, int n) {
